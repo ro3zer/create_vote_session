@@ -20,7 +20,7 @@ export default function App() {
       const result = await agwClient.createSession({
         session: {
           signer: sessionSigner.address,
-          expiresAt: BigInt(Math.floor(Date.now() / 1000) + 365 * 60 * 24 * 60), // 30일 뒤 만료
+          expiresAt: BigInt(Math.floor(Date.now() / 1000) + 365 * 60 * 24 * 60), // 365일 뒤 만료
           feeLimit: {
             limitType: 1, // LimitType.Lifetime 대신 직접 문자열 입력
             limit: parseEther("0.1"), 
